@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (!form) return;
   
-    // Paste your deployed Google Apps Script Web App URL here
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxbumIDbK9iYKRAie9EPXdP0NVXk1pu1bBov755QjvKKjI8T0sExQCujPbc7edIvzZnng/exec";
   
     form.addEventListener("submit", async (e) => {
