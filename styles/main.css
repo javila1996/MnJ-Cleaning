@@ -1,13 +1,37 @@
 :root {
-    --bg: #0b1220;
-    --card: #0f1a2e;
-    --text: #eaf0ff;
-    --muted: #93a4c7;
-    --brand: #4cc9f0;
-    --accent: #ffd257;
-    --radius: 16px;
-    --border: rgba(255,255,255,.12);
-  }
+  --bg: #f6f3ec;
+  --card: #ffffff;
+
+  --text: #2f2f2b;
+  --muted: #7a7a6f;
+
+  --brand: #a8b28a;
+  --accent: #d6c9a3;
+
+  --radius: 18px;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.btn.primary {
+  background-color: var(--brand);
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background-color: #9aa57d;
+}
   
   * { box-sizing: border-box; }
   html, body { height: 100%; }
