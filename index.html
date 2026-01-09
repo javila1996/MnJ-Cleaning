@@ -111,21 +111,55 @@
   <h2>Request a Quote</h2>
 
   <form id="quoteForm">
-    <input type="text" name="name" placeholder="Full Name" required />
-    <input type="tel" name="phone" placeholder="Phone Number" required />
-    <input type="email" name="email" placeholder="Email Address" required />
-
-    <select name="service" required>
-      <option value="">Select Service</option>
-      <option>Standard Cleaning</option>
-      <option>Deep Cleaning</option>
-      <option>Move-In / Move-Out</option>
-    </select>
-
-    <textarea name="message" placeholder="Tell us about your home"></textarea>
-
-    <button type="submit" class="btn primary">Send Request</button>
-    <p id="formStatus"></p>
+    <input type="hidden" name="source" value="Homepage Quote Form" />
+  
+    <div class="form-row">
+      <div>
+        <label for="name">Full name</label>
+        <input id="name" name="name" required autocomplete="name" />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" required autocomplete="tel" />
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+      <div>
+        <label for="service">Service type</label>
+        <select id="service" name="service" required>
+          <option value="" selected disabled>Select one</option>
+          <option>Standard Housekeeping</option>
+          <option>Deep Cleaning</option>
+          <option>Move-In / Move-Out</option>
+          <option>One-Time Cleaning</option>
+          <option>Recurring Cleaning</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div>
+        <label for="size">Home size (approx.)</label>
+        <input id="size" name="size" placeholder="e.g., 3 bed / 2 bath" />
+      </div>
+      <div>
+        <label for="date">Preferred date</label>
+        <input id="date" name="date" type="date" />
+      </div>
+    </div>
+  
+    <div>
+      <label for="message">Details / priorities</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+  
+    <button class="btn primary" type="submit">Send Request</button>
+    <div id="formStatus" class="small muted"></div>
   </form>
 </section>
 
@@ -137,5 +171,6 @@
 
 <!-- JavaScript -->
 <script src="./scripts/main.js"></script>
+<script src="quote-form.js" defer></script>
 </body>
 </html>
